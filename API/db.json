@@ -1,0 +1,61 @@
+{
+
+    "selecoes":[ {
+
+        "id": 1,
+        "nome": "Brasil",
+        "grupo": "G",
+        "logo": "https://cdn.pixabay.com/photo/2022/11/04/02/31/brazil-7568906_1280.png",
+        "conquistas":
+        [
+            {
+                "ano": 1958,
+                "pais": "Suécia"
+            },
+            {
+                "ano": 1962,
+                "pais": "Chile"
+            },
+            {
+                "ano": 1970,
+                "pais": "México"
+            },
+            {
+                "ano": 1994,
+                "pais": "Estados Unidos"
+            },
+            {
+                "ano": 2002,
+                "pais": "Coreia do Sul/Japão"
+            }
+        ],
+        "jogadores":
+        [
+            {
+                "id": 1,
+                "nome": "Arrascaeta",
+                "camisa": 10,
+                "posicao": "Atacante",
+                "titular": true,
+                "gols": 79
+            },
+            {
+                "id": 2,        
+                "nome": "Rodrigo",
+                "camisa": 7,
+                "posicao": "Ponta-direita",
+                "titular": true,
+                "gols": 15
+            },
+            {
+                "id": 3,        
+                "nome": "Zico",
+                "camisa": 9,
+                "posicao": "Meio-campista",
+                "titular": false,
+                "gols": 10
+            }
+         ]
+    }
+    ]
+}
