@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Copa do Mundo — Seleções</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <meta name="description" content="Lista de seleções conectada à API local" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Copa do Mundo</h1>
+      <input id="search" placeholder="Buscar seleção (ex: Brasil)" aria-label="Buscar seleção" />
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="secoes" class="grid"></section>
+    <div id="empty" class="empty">Carregando seleções...</div>
+  </main>
+
+  <template id="card-template">
+    <article class="card">
+      <img class="logo" alt="logo seleção" />
+      <div class="card-body">
+        <div class="card-header">
+          <h2 class="nome"></h2>
+          <small class="grupo"></small>
+        </div>
+        <p class="meta"></p>
+        <div class="actions">
+          <button class="toggle">Ver jogadores</button>
+        </div>
+        <div class="details hidden">
+          <h3>Jogadores</h3>
+          <ul class="jogadores"></ul>
+          <h3>Conquistas</h3>
+          <ul class="conquistas"></ul>
+        </div>
+      </div>
+    </article>
+  </template>
+
+  <script src="./app.js" type="module"></script>
+</body>
+</html>
