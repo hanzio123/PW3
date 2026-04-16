@@ -1,32 +1,38 @@
-
-//import { useEffect, useState } from "react";
-//import { getVeiculos } from "../services/veiculoService";
-//import type { Veiculo } from "../types/veiculo";
+import { useEffect, useState } from "react";
+import { getVeiculos } from "../services/veiculoService";
+import type { Veiculo } from "../types/veiculo";
 import { VeiculoCard } from "../components/VeiculoCard";
-import { useVeiculos } from "../hooks/useVeiculos";
 
 export function VeiculosList() {
-  const { veiculos, loading, error } = useVeiculos();
-  
-  //const [veiculos, setVeiculos] = useState<Veiculo[]>([]);
-  //useEffect(() => {
-    //getVeiculos().then(setVeiculos);
-  //}, []);
-  
-if (loading) {
-    return <p>Carregando veículos...</p>;
-  }
+  const [veiculos, setVeiculos] = useState<Veiculo[]>([]);
+  const [valorMinimo, setValorMinimo] = useState<number>(0);
 
-  if (error) {
-    return <p>{error}</p>;
-  }
+  useEffect(() => {
+    getVeiculos().then(setVeiculos);
+  }, []);
+
+  const veiculosFiltrados = veiculos.filter(v => v.valor >= valorMinimo);
 
   return (
     <div>
       <h1>Lista de Veículos</h1>
 
-      {veiculos.map((V) => (
-        <VeiculoCard key={V.id} veiculo={V} />
+      {}
+      <div style={{ marginBottom: 20 }}>
+        <label>Filtrar por valor mínimo (R$): </label>
+        <input
+          type="number"
+          value={valorMinimo}
+          onChange={(e) => setValorMinimo(Number(e.target.value))}
+          style={{ marginLeft: 8, padding: 5 }}
+        />
+        <button onClick={() => setValorMinimo(0)} style={{ marginLeft: 8 }}>
+          Limpar
+        </button>
+      </div>
+
+      {veiculosFiltrados.map(veiculo => (
+        <VeiculoCard key={veiculo.id} veiculo={veiculo} />
       ))}
     </div>
   );

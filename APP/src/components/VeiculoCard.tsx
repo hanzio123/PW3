@@ -10,6 +10,7 @@ export function VeiculoCard({ veiculo }: Props) {
             <h2>{veiculo.modelo}</h2>
             <p>{veiculo.descricao}</p>
             
+            <p>📸 Quantidade de fotos: {veiculo.fotos.length}</p>
             <p>
                 Ano: {veiculo.ano} / {veiculo.ano_modelo}
             </p>
