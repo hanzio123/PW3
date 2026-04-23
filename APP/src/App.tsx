@@ -1,4 +1,5 @@
-import { VeiculosList } from "./pages/VeiculosList";
+import { VeiculosList } from "./pages/VeiculoList.tsx";
+import { FabricanteList } from "./pages/FabricanteList";
 
 export default function App() {
   return <VeiculosList />;
