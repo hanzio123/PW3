@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { getVeiculos } from "../services/veiculoService";
 import type { Veiculo } from "../types/veiculo";
 
-import { VeiculoCard } from "../../components/VeiculoCard";
-import { ListaVazia } from "../../components/ListaVazia";
+import { VeiculoCard } from "../components/VeiculoCard";
+import { ListaVazia } from "../components/ListaVazia";
 
 export function VeiculosList() {
   const [veiculos, setVeiculos] = useState<Veiculo[]>([]);

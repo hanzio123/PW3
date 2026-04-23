@@ -1,4 +1,4 @@
-import type { Veiculo } from "../src/types/veiculo.ts";
+import type { Veiculo } from "../types/veiculo.ts";
 
 interface Props {
   veiculo: Veiculo;
@@ -8,7 +8,7 @@ export function VeiculoCard({ veiculo }: Props) {
   return (
     <div
       style={{
-        border: "1px solid #ccc",
+        border: "1px solid #8622c9",
         padding: "16px",
         marginBottom: "16px",
         borderRadius: "10px",
