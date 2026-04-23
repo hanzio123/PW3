@@ -6,7 +6,7 @@ import { VeiculoCard } from "../components/VeiculoCard";
 import { useVeiculos } from "../hooks/useVeiculos";
 
 export function VeiculosList() {
-  const { veiculos, loading, error } = useVeiculos();
+  const { veiculos, loading, error, refetch } = useVeiculos();
   
   //const [veiculos, setVeiculos] = useState<Veiculo[]>([]);
   //useEffect(() => {
@@ -24,6 +24,8 @@ if (loading) {
   return (
     <div>
       <h1>Lista de Veículos</h1>
+    <button onClick={refetch}>Recarregar</button>
+    
 
       {veiculos.map((V) => (
         <VeiculoCard key={V.id} veiculo={V} />

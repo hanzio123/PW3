@@ -5,8 +5,8 @@ import type { Veiculo } from "../types/veiculo";
 export function useVeiculos() {
   const [veiculos, setVeiculos] = useState<Veiculo[]>([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-   
+  const [error, setError] = useState<string | null>(null); 
+
   useEffect (() => {
     async function fetchData() {
       try {
@@ -21,5 +21,5 @@ export function useVeiculos() {
     fetchData();
     }, []);
     
-  return { veiculos, loading, error };
+  return { veiculos, loading, error, refetch: fetchData };
 }
